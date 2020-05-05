@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
 import PartList from './PartList/PartList'
 import Cart from './Cart/Cart'
 import Navbar from './Navbar'
-
+import FEATURES from './STORE'
 import './App.css';
 
 class App extends Component {
@@ -48,7 +47,7 @@ class App extends Component {
         <Navbar/>
         <main>
           <PartList 
-            features={this.props.features}
+            features={FEATURES}
             handleCheckItem = {(feature, item) => this.checkItem(feature, item)}
             handleSelectFeature = {(feature, item) => this.updateFeature(feature, item)}
             selected = {this.state.selected}
